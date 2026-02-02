@@ -5,6 +5,7 @@
     ./modules/home/zen.nix
     ./modules/home/bash.nix
     ./modules/home/git.nix
+    ./modules/home/tmux.nix
   ];
 
   home.packages = with pkgs; [
