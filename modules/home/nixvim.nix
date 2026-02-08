@@ -86,6 +86,7 @@
       };
     };
 
+    plugins.autoclose.enable = true;
     plugins.comfy-line-numbers.enable = true;
     plugins.treesitter.enable = true;
     plugins.direnv.enable = true;
