@@ -11,6 +11,8 @@
   home.packages = with pkgs; [
     nixpkgs-fmt
     ripgrep
+    man-pages
+    man-pages-posix
   ];
 
   home.username = "dhanvinm";
