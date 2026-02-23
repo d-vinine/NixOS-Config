@@ -22,6 +22,7 @@
         transparent_background = true;
         integrations = {
           cmp = true;
+          nvimtree = true;
           gitsigns = true;
           treesitter = true;
           telescope.enabled = true;
@@ -38,6 +39,30 @@
           desc = "Format Buffer";
           silent = true;
         };
+      }
+      {
+        mode = "n";
+        key = "<leader>e";
+        action = ":NvimTreeToggle<CR>";
+        options.desc = "Toggle Nvim Tree";
+      }
+      {
+        mode = "n";
+        key = "<leader>f";
+        action = ":NvimTreeFocus<CR>";
+        options.desc = "Focus NvimTree";
+      }
+      {
+        mode = "n";
+        key = "<leader>nf";
+        action = ":NvimTreeFindFile<CR>";
+        options.desc = "Find current file in tree";
+      }
+      {
+        mode = "n";
+        key = "<leader>nc";
+        action = ":NvimTreeCollapse<CR>";
+        options.desc = "Collapse NvimTree nodes";
       }
     ];
 
@@ -86,6 +111,27 @@
       };
     };
 
+    plugins.telescope = {
+      enable = true;
+      keymaps = {
+        "<leader>ff" = "find_files";
+        "<leader>fg" = "live_grep";
+      };
+    };
+
+
+    plugins.nvim-tree = {
+      enable = true;
+      git = {
+        enable = true;
+        ignore = false; 
+        showOnDirs = true; 
+        timeout = 400; 
+      };
+      renderer.icons.show.git = true; 
+    };
+
+    plugins.tmux-navigator.enable = true;
     plugins.autoclose.enable = true;
     plugins.comfy-line-numbers.enable = true;
     plugins.treesitter.enable = true;
