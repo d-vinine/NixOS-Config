@@ -11,6 +11,7 @@
   home.packages = with pkgs; [
     nixpkgs-fmt
     ripgrep
+    nmon
     man-pages
     man-pages-posix
   ];
